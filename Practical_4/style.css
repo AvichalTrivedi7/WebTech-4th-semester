@@ -1,0 +1,19 @@
+body {
+    background-image: url("audi r8 black.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Arial;
+}
+
+h1 {
+    font-family: "Times New Roman";
+    color: cyan;
+    text-align: center;
+}
+
+p {
+    font-family: Verdana;
+    font-size: 18px;
+    color: pink;
+    text-align: center;
+}
