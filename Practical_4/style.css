@@ -17,3 +17,9 @@ p {
     color: pink;
     text-align: center;
 }
+img {
+    border: 10px solid white; /* Creates the frame */
+    width: 300px;             /* Keeps the image size manageable */
+    display: block;           /* Allows centering */
+    margin: 20px auto;        /* Centers the image */
+}
