@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM console error() Method</title>
+    <style>
+        h1 {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Hello World</h1>
+    <h2>DOM console error() Method</h2>
+
+    <p>
+        To view the message in the console,
+        press the F12 key on your keyboard.
+    </p>
+
+    <p>
+        To check for errors, double click
+        the button below.
+    </p>
+
+    <button ondblclick="error_msg()">
+        Check Errors
+    </button>
+
+    <script>
+        function error_msg() {
+            console.error("A mistake has been encountered.");
+        }
+    </script>
+
+</body>
+</html>
