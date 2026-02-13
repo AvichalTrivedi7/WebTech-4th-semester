@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Scientific Calculator</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #calc {
+            width: 330px;
+            margin: auto;
+        }
+
+        #display {
+            width: 310px;
+            height: 45px;
+            font-size: 20px;
+            text-align: right;
+            margin-bottom: 10px;
+            padding-right: 5px;
+        }
+
+        input[type="button"] {
+            width: 70px;
+            height: 45px;
+            margin: 3px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>Scientific Calculator</h2>
+
+<div id="calc">
+
+    <input type="text" id="display" disabled>
+
+    <br>
+
+    <!-- Scientific Buttons -->
+    <input type="button" value="sin" onclick="addFunc('Math.sin(')">
+    <input type="button" value="cos" onclick="addFunc('Math.cos(')">
+    <input type="button" value="tan" onclick="addFunc('Math.tan(')">
+    <input type="button" value="log" onclick="addFunc('Math.log10(')">
+
+    <br>
+
+    <input type="button" value="√" onclick="addFunc('Math.sqrt(')">
+    <input type="button" value="x²" onclick="square()">
+    <input type="button" value="π" onclick="addToDisplay('Math.PI')">
+    <input type="button" value="^" onclick="addFunc('**')">
+
+    <br>
+
+    <!-- Numbers -->
+    <input type="button" value="7" onclick="addToDisplay('7')">
+    <input type="button" value="8" onclick="addToDisplay('8')">
+    <input type="button" value="9" onclick="addToDisplay('9')">
+    <input type="button" value="/" onclick="addToDisplay('/')">
+
+    <br>
+
+    <input type="button" value="4" onclick="addToDisplay('4')">
+    <input type="button" value="5" onclick="addToDisplay('5')">
+    <input type="button" value="6" onclick="addToDisplay('6')">
+    <input type="button" value="*" onclick="addToDisplay('*')">
+
+    <br>
+
+    <input type="button" value="1" onclick="addToDisplay('1')">
+    <input type="button" value="2" onclick="addToDisplay('2')">
+    <input type="button" value="3" onclick="addToDisplay('3')">
+    <input type="button" value="-" onclick="addToDisplay('-')">
+
+    <br>
+
+    <input type="button" value="0" onclick="addToDisplay('0')">
+    <input type="button" value="." onclick="addToDisplay('.')">
+    <input type="button" value="(" onclick="addToDisplay('(')">
+    <input type="button" value=")" onclick="addToDisplay(')')">
+
+    <br>
+
+    <input type="button" value="C" onclick="clearDisplay()">
+    <input type="button" value="=" onclick="calculate()">
+    <input type="button" value="+" onclick="addToDisplay('+')">
+
+</div>
+
+<script>
+
+function addToDisplay(val) {
+    document.getElementById("display").value += val;
+}
+
+function addFunc(val) {
+    document.getElementById("display").value += val;
+}
+
+function clearDisplay() {
+    document.getElementById("display").value = "";
+}
+
+function square() {
+    let value = document.getElementById("display").value;
+    document.getElementById("display").value = value + "**2";
+}
+
+function calculate() {
+    let expression = document.getElementById("display").value;
+    if (expression) {
+        try {
+            document.getElementById("display").value = eval(expression);
+        } catch {
+            document.getElementById("display").value = "Error";
+        }
+    }
+}
+
+</script>
+
+</body>
+</html>

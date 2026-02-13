@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Average Marks & Grade</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        input {
+            margin: 5px;
+            padding: 5px;
+            width: 120px;
+        }
+
+        button {
+            padding: 6px 12px;
+            margin-top: 10px;
+        }
+
+        #result {
+            margin-top: 15px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>Average Marks & Grade Calculator</h2>
+
+<input type="number" id="m1" placeholder="Subject 1">
+<input type="number" id="m2" placeholder="Subject 2">
+<input type="number" id="m3" placeholder="Subject 3">
+<input type="number" id="m4" placeholder="Subject 4">
+<input type="number" id="m5" placeholder="Subject 5">
+
+<br>
+
+<button onclick="calculateGrade()">Calculate</button>
+
+<p id="result"></p>
+
+<script>
+
+function calculateGrade() {
+
+    let m1 = parseFloat(document.getElementById("m1").value) || 0;
+    let m2 = parseFloat(document.getElementById("m2").value) || 0;
+    let m3 = parseFloat(document.getElementById("m3").value) || 0;
+    let m4 = parseFloat(document.getElementById("m4").value) || 0;
+    let m5 = parseFloat(document.getElementById("m5").value) || 0;
+
+    let total = m1 + m2 + m3 + m4 + m5;
+    let average = total / 5;
+
+    let grade;
+
+    if (average >= 90)
+        grade = "A+";
+    else if (average >= 80)
+        grade = "A";
+    else if (average >= 70)
+        grade = "B";
+    else if (average >= 60)
+        grade = "C";
+    else if (average >= 50)
+        grade = "D";
+    else
+        grade = "F";
+
+    document.getElementById("result").innerHTML =
+        "Average Marks: " + average.toFixed(2) + "<br>Grade: " + grade;
+}
+
+</script>
+
+</body>
+</html>
