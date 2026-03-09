@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Form Validation using JavaScript</title>
+
+<style>
+form{
+    margin: auto;
+    width: 600px;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1 style="text-align:center;">REGISTRATION FORM</h1>
+
+<form name="RegForm" onsubmit="return XYZ()">
+
+<p>
+Name:
+<input type="text" name="Name" size="65" placeholder="Your Name">
+</p>
+
+<p>
+Address:
+<input type="text" name="Address" size="65" placeholder="Your Address">
+</p>
+
+<p>
+E-mail Address:
+<input type="text" name="EMail" size="65" placeholder="demo@example.com">
+</p>
+
+<p>
+Password:
+<input type="password" name="Password" size="65">
+</p>
+
+<p>
+Select Your Course:
+<select name="Subject">
+<option>Select Course</option>
+<option>BTECH</option>
+<option>BBA</option>
+<option>BCA</option>
+<option>B.COM</option>
+</select>
+</p>
+
+<p>
+Comments:
+<textarea cols="55" name="Comment"></textarea>
+</p>
+
+<p>
+<input type="submit" value="Send">
+<input type="reset" value="Reset">
+</p>
+
+</form>
+
+<script src="script.js"></script>
+
+</body>
+</html>
